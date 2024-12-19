@@ -1,0 +1,640 @@
+/* 
+Font used in the website. could only find .woff and .otf online
+Font meant to replicate the font used in the game Undertale 
+*/
+@font-face {
+    font-family: Determination;
+    src: url('/fonts/DeterminationMonoWeb.woff') format('woff'),
+         url('/fonts/DTM-Mono.otf') format('opentype');
+}
+
+/* Ensuring Compatibility across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting defaults for font+color alongside background image */
+body {
+  background-image: url('/images/StarsBackground.jpg');
+  font-family: Determination, Arial, sans-serif; /* Fallback fonts incase Determination isn't found */
+  color: white;
+}
+
+p {
+  font-size: 30px;
+}
+
+/* 
+h2 acts as a subheader and stretches the with of the page 
+I originally experimented with making the subheader grow alongside the width of the browser,
+however i found it to look off and the sizes weren't consistent to my liking.
+*/
+h2 {
+  font-size: 50px;
+  margin: 60px 5px 30px;
+  text-align: center;
+}
+
+/* increases font size of ul element and changes style to square for style consistensy */
+ul {
+  list-style: square;
+  font-size: 30px;
+}
+
+/* styles all links yellow to fit with the game */
+a {
+  color: yellow
+}
+
+/* Makes all visited links gray */
+a:visited {
+  color: gray;
+}
+
+/* strong text appears yellow to emphasise importance. Remains color consistent */
+strong {
+  color: yellow;
+}
+
+/* 
+Ensures images are in the right spot in a grid
+Gives all images display of block for positioning and since default is inline
+gives all images a default 5px border to enure consitensy
+*/
+img {
+  display: block;
+  grid-area: img;
+  margin: auto;
+  border: 5px solid white;
+}
+
+/* Gives all videos a border to ensure consistensy */
+video {
+  border: 5px solid white;
+}
+
+/* gives figure a margin and sets as inline block */
+figure {
+  display: inline-block;
+  margin: 20px; /* adjust as needed */
+}
+
+/* along with selector below, ensures figure caption is aligned with it's figure */
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption {
+  margin-top: 2px; /* separates dotted border from solid border above */
+  border: 2px dotted white;
+  background-color: black;
+  text-align: center;
+}
+
+/* Nav Bar Selectors */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* positions navbar ontop of everything */
+  overflow: hidden;
+  background-color: black;
+  overflow: hidden;
+  border: 7px solid white;
+}
+
+/* styles navigation buttons */
+nav a {
+  float: left; /* most links float on the left side */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+}
+
+/* about us link floats on the right side */
+.rightnav {
+  float: right;
+}
+
+/* takes priority over the previous "a:visited" selector to keep buttons consistent */
+nav a:visited {
+  background-color: black;
+  color: white;
+}
+
+/* changes color of button if you're on that page */
+nav a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+/* navbar link changes when hovered over. takes priotity over the active class selector */
+nav a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* End of Nav Bar styling */
+
+/* Styling for footer */
+
+/* ensures form ends up in the right spot in footer */
+form {
+  grid-area: form;
+}
+
+/* Styling the headers in the footer */
+footer h3{
+  margin: 30px auto;
+  font-size: 2em;
+}
+
+/* Text area styling */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; /* lets you resize vertically */
+}
+  
+/* Submit button */
+input[type=submit] {
+  background-color: black; /* background, text and border color ensures consistensy */
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer; /* switches cursor type when cursor is over it */
+}
+  
+/* Submit button when hovered colored yellow to fit with the style*/
+input[type=submit]:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* Styling for the main footer container */
+.footer-container {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr; /* uses grid and grid template area for positioning in the right spot */
+  grid-template-areas: 'footerinfo form';
+  grid-column-gap: 30px; /* grid gap between the 2 areas */
+  border: 2px solid white; /* background color and border align with the page's style */
+  border-radius: 5px; /* curved corners to distinguish the footer from the rest of the page */
+  background-color: black;
+  padding: 20px;
+}
+
+/* ensures footer info area ends up in the right spot in footer */
+.footerinfo {
+  grid-area: footerinfo;
+}
+
+/* removes list dots and gives list a specific font size */
+.footerinfo ul {
+  list-style: none;
+  font-size: 30px;
+}
+
+/* Adds margin above and below list elements */
+.footerinfo li {
+  margin: 15px 0;
+}
+
+/* End of Footer styling */
+
+
+/* UTILITY SELECTORS */
+
+/* 
+Gives the text a black box behind it with a white border
+Made to replicate Undertale dialogue and menus 
+*/
+.textbox {
+  background-color: black;
+  border: 4px solid white;
+}
+
+/* Description Texts */
+.desc {
+  grid-area: desc;
+  text-align: left; /* Aligns descriptive text to the left */
+  overflow: scroll; /* Allows you to scroll in the box if it's too small. Useful for mobile. */
+  margin: auto; /* Centers the box itself in it's position */
+  width: 95%; /* Box with stretches 95% of it's container */
+  padding: 5px; /* To make the text easier to read */
+
+}
+
+.desc ul {
+  padding: 25px; /* To make the text easier to read */
+}
+
+/* description for smaller pieces of text directly under header */
+.desc-middle {
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 3px;
+  font-size: 2.25em;
+  text-align: center;
+}
+
+/* Class for background banner */
+.banner {
+  background-size: cover;
+  background-position: top center;
+  width: 100%; /* Stretches full width of page */
+  height: 500px; /* Height of banner itself */
+  display: flex; /* Flex + Justify content + align items centers title box */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Creates a grid with description on the left and an image on the right*/
+.grid-sect {
+  display: grid;
+  grid-gap: 10px;
+  grid: 'desc img';
+}
+
+/* Same as above, but reversed */
+.grid-rev-sect {
+  display: grid;
+  grid-gap: 10px;
+  grid: 'img desc';
+}
+
+/* flex container where rows are stacked upon eachother*/
+.flex-stack-container {
+  display: flex;
+  flex-direction: column; /* the three rows are stacked ontop eachother */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* flex row */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to stack ontop of eachother when browser is compressed */
+  justify-content: space-around; /* Correct spacing for images */
+  align-items: center; /* aligns items on cross axis to center */
+}
+/* images within the flex row */
+.flex-row img {
+  border: 3px solid white;
+  height: 300px; /* Ensures same and width height across all images */
+  width: 300px;
+}
+
+/* "Title" boxes using Box Model and flexbox to align the text */
+.title {
+  display: flex; /* centers text within box */
+  justify-content: center;
+  align-items: center;
+  min-width: 500px;
+  width: 60%;
+  height: 50%;
+  border: 8px solid white;
+  padding:20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*
+Flip Charater Card classes
+Made with help from W3Schools
+When the mouse is hovered over the character profile, it flips around.
+*/
+
+/* The flip card container */
+.flip-chr {
+  background-color: transparent;
+  margin: 20px; /* Minimum spacing between images */
+  width: 300px; /* 306px instead of 300 width and height to align with borders */
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-chr-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-chr:hover .flip-chr-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-chr-front, .flip-chr-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Styles the front side (fallback if image is missing) */
+.flip-chr-front {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Styles the back side */
+.flip-chr-back {
+  background-color: black;
+  color: white;
+  border: 3px solid white;
+  transform: rotateY(180deg);
+}
+
+/* Header for flip card backside */
+.flip-chr-back h3 {
+  font-size: 3em;
+}
+
+/* text for flip card backside */
+.flip-chr-back p {
+  margin: 15px 20px;
+  font-size: 1.5em;
+}
+
+/* End of Flip Character Classes */
+
+/*
+About Card Classes
+Classes and styling used for creating the cards in the About Us page
+*/
+
+/* About card as a whole styling */
+.aboutcard {
+  border: 5px solid white; /* given a specific border and background color for consistensy */
+  background-color: black;
+  width: 355px; /* Given a specific width that's the same across both about cards */
+  text-align: center; /* all text is centered */
+  margin: 20px 15px 50px;
+}
+.aboutcard img{
+  width: 100%; /* width is same as width of the whole card, height auto to have good proportions */
+  height: auto;
+}
+
+/* h2 and p font sized resized to fit */
+.aboutcard h2{
+  width: 100%;
+  margin: 15px auto;
+}
+
+.aboutcard p{
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 2px;
+  font-size: 25px;
+}
+
+/* End of About Card Casses */
+
+/* END OF UTILITY CLASS SELECTORS */
+
+/* 
+Banner Image Selectors.
+Banner image changes depending on page, image itself and position on page
+done through use of IDs
+*/
+
+/* Home top banner */
+#home-banner {
+  background-image: url('/images/banner.jpg');
+  background-position: top center;
+}
+
+/* Home bottom banner */
+#home-end-banner {
+  background-image: url('/images/RuinsCity.jpg');
+  background-position: bottom center;
+  margin-top: 50px;
+}
+
+/* AUs banner */
+#au-banner {
+  background-image: url('/images/AUbanner.jpg');
+  background-position: top center;
+}
+
+/* shop banner */
+#shop-banner {
+  background-image: url('/images/shopbanner.jpg');
+  background-position: top center;
+}
+
+/* stats banner */
+#stats-banner {
+  background-image: url('/images/statsbanner.webp');
+  background-position: top center;
+}
+
+/* About Us banner */
+#about-banner {
+  background-image: url('/images/aboutbanner.jpg');
+  background-position: top center;
+}
+
+/* 
+Media Sizing 
+Sizes the different media (images/video) when needed.
+self explanatory which media belongs to which selectors based on the IDs
+media that use the same height are grouped, as seen below
+*/
+
+#description img{
+  max-width: 700px;
+  max-height: 550px;
+  width: 90%; /* Image takes up 90% width of it's container and height scales accordingly */
+}
+
+#undertale video {
+  height: 350px;
+}
+
+#au img{
+  border: 5px solid yellow; /* Yellow border color matches with Undertale. Was used because the original image has a white background */
+  max-width: 90%;
+  width: 20vw; /* width changes alongside size of browser */
+}
+
+#underswap img{
+  max-width: 70%;
+  width: 30vw; /* width changes alongside size of browser */
+}
+
+#underfell img {
+  border: 5px solid yellow; /* Yellow border color matches with Undertale. Was used because the original image has a white background */
+  margin: 25px auto;
+  width: 50%;
+}
+
+#outertale img, #lastbreath img, #dreamnightmare img{
+  max-width: 70%;
+  width: 30vw; /* width changes alongside size of browser */
+}
+
+#storyshift img, #storyshift img, #aftertale img{
+  max-width: 70%;
+  width: 35vw; /* width changes alongside size of browser */
+}
+
+#dusttale img{
+  max-width: 70%;
+  width: 25vw; /* width changes alongside size of browser */
+}
+
+/* styling figure element to include caption below */
+#outcode figure{
+  display: block;
+  margin: 50px auto;
+  width: 40%;
+  font-size: 20px;
+}
+/* outcode figure image stretches across figure */
+#outcode img{
+  width: 100%;
+}
+
+#inknerror img{
+  width: 70%;
+}
+
+#fresh img{
+  border: 5px solid yellow; /* Yellow border color matches with Undertale. Was used because the original image has a white background */
+  max-width: 60%;
+  width: 30vw; /* width changes alongside size of browser */
+}
+
+/* Styling the Iframe for UNDERVERSE */
+#underverse iframe {
+  display: block;
+  margin: 50px auto;
+  border: 5px solid white;
+  width: 516px;
+  height: 315px;
+}
+
+/* End of media sizing */
+
+/* 
+Setting manual heights per textbox
+textboxes that use the same height are grouped, as seen below
+ */
+
+#description .desc {
+  height: 400px;
+}
+
+#undertale .desc {
+  height: 250px;
+}
+
+#au .desc {
+  height: 500px;
+}
+
+#about-aus .desc {
+  height: 450px;
+}
+
+#underswap .desc, #inknerror .desc {
+  height: 550px;
+}
+
+#underfell .desc {
+  width: 75%;
+  height: 410px;
+}
+
+#outertale .desc, #storyshift .desc, #aftertale .desc, #fresh .desc {
+  height: 300px;
+}
+
+#lastbreath .desc, #dusttale .desc {
+  height: 250px;
+}
+
+#outcode .desc {
+  height: 300px;
+}
+
+#dreamnightmare .desc, #underverse .desc {
+  height: 320px;
+}
+
+/* End of manual textbox heights */
+
+/* adds top margin space to the article of the undertale section*/
+#undertale article {
+  margin-top: 75px;
+}
+
+/* Stats Page import */
+table {
+  margin: 50px auto;
+  border-spacing: 7px;
+  font-size: 20px;
+}
+
+th {
+  border: 5px solid black; 
+  border-style: outset;
+  padding: 7.5px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}
+
+td {
+  border: 5px solid white; 
+  border-style: outset;
+  padding: 8px;
+  background-color: black;
+  text-align: center;
+}
+
+#au-stat table {
+  width: 90%;
+  font-size: 15px;
+}
+
+/* shop page import */
+.shop-grid-container{
+  display: grid;
+  column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  background-color: white;
+  margin: 100px 30px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.shop-grid-container img{
+  margin-top: 20px;
+  border: 5px solid yellow;
+}
+
+.shop-grid-container > div{
+  background-color: black;
+  color: white;
+}

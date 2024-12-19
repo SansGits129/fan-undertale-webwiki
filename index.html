@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Home - The Undertale Fanmade WebWiki</title>
+        <link href="/styles/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!--Header/Title for the website-->
+        <header id="home-banner" class="banner">
+            <div class="textbox title">
+                <h1>Welcome to The Undertale<br>Fanmade Webwiki!</h1>
+            </div>
+        </header>
+
+        <!--
+        Navigation Bar
+        Using many styled links instead of lists makes using ul easier later on
+        -->
+        <nav>
+            <a href="/index.html" class="active">Home</a>
+            <a href="/pages/aus.html">AUs</a>
+            <a href="/pages/stats.html">Stats</a>
+            <a href="/pages/shop.html">Shop</a>
+            <a href="/pages/about.html" class="rightnav">About Us</a>    
+        </nav>
+
+        <!--
+        Main Content
+        Uses semantic "Section" tags to describe the different sections
+        Added "alt" to images incase they don't load
+        -->
+        <main>
+            <!--What is this Website about? Website description-->
+            <section id="description">
+                <h2 class="textbox">What is this website about?</h2>
+                <!--Grid class puts Text on the left and Image right-->
+                <div class="grid-sect">
+                    <!--Descriptive Text uses double line breaks between paragraphs-->
+                    <p class="textbox desc">
+                        This website is a fan wiki made by Us with the purpouse of giving information about the hit indie game "Undertale", 
+                        alongside it's various fanmade content.
+                        <br><br>In this website, you'll learn all about Undertale, its characters, and about Alternate universes.
+                        <br><br>You'll also find a Stats page with information about some of the character's stats, a Shop where you can buy some merch and information about Us, the creators.
+                    </p>
+                    <img src="/images/Undertale.jpg" alt="Promotional Artwork for Undertale">
+                </div>
+            </section>
+
+            <!--What is Undertale?-->
+            <section id="undertale">
+                <h2 class="textbox">What is Undertale?</h2>
+                <p class="textbox desc">
+                    Undertale is an indie game released in 2015 made by Toby fox.
+                   <br>The game follows a child as they fall into a place called "The Underground" and come across a plethora of different Monsters. Some are nice, other's aren't.
+                   <br>The game puts a heavy emphasis on your choices mattering to the world around you and implements a "Spare" mechanism which allows you to spare the monsters who attack you.
+                   <br>The game has multiple different endings depending on the choices you make, such as a <strong>Pacifist</strong> ending or a <strong>Genocide</strong> ending.
+                </p>
+                <!--
+                Article tag used for grouping of Game Trailer and photo of Toby
+                Uses flex row class to space/stack images accordingly
+                -->
+                <article class="flex-row">
+                    <!--Video with controls using mp4 of trailer as source-->
+                    <video controls>
+                        <source src="/images/Trailer.mp4" type="video/mp4">
+                        <!--Text incase the video isn't found/doesn't load-->
+                        Video Not Found, Sorry!
+                    </video>
+                    <!--Toby Fox's image in a figure alongside a caption using semantics-->
+                    <figure>
+                        <img src="/images/Toby_Fox.webp" alt="Toby Fox">
+                        <figcaption>Toby Fox, Creator of Undertale</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <!--Section describing the Different characters in the game-->
+            <section id="characters">
+                <h2 class="textbox">Characters</h2>
+                <!--Middle desc class due to the way it's used differently from the other descriptive texts-->
+                <p class="textbox desc-middle">Here are some of the different characters you'll meet along your journey:</p>
+                <!--
+                Flex column container containing 3 rows
+                Flex containers and rows allow 3x3 flex grid that spaces/stacks accordingly to the browser size
+                Flex rows use flip cards with character images on the front and descriptions on the back
+                Flip cards made with help from W3Schools
+                -->
+                <div class="flex-stack-container">
+                    <!--Flex row which contents stack ontop of eachother upon browser shrink-->
+                    <div class="flex-row">
+                        <!--
+                        Protagonist Character Card
+                        Comments on character card parts provided here
+                        -->
+                        <div class="flip-chr">
+                            <!--Character card Inner-->
+                            <div class="flip-chr-inner">
+                                <!--Character Card Frontside with image-->
+                                <div class="flip-chr-front">
+                                    <img src="/images/Frisk.jpg" alt="Frisk">
+                                </div>
+                                <!--Character Card Backside including header and text-->
+                                <div class="flip-chr-back">
+                                    <h3>The Protagonist</h3>
+                                    <p>The Child you play as</p>
+                                    <p>Be careful along your journey</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Flowey Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Flowey.jpg" alt="Flowey">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Flowey</h3>
+                                <p>A friendly Flower</p>
+                                <p>Will help guide you along your journey</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--Toriel Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Toriel.jpg" alt="Toriel">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Toriel</h3>
+                                <p>Caretaker of The Ruins</p>
+                                <p>You will have to prove your strength to get past her</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Flex Row 2-->
+                    <div class="flex-row">
+                        <!--Sans Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Sans.jpg" alt="Sans">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Sans</h3>
+                                <p>A funny Skeleton who loves to crack puns</p>
+                                <p>Will judge you near the end of the game based on your choices</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--Papyrus Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Papyrus.jpg" alt="Papyrus">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Papyrus</h3>
+                                <p>Sans' Kindhearted and Awesome Brother</p>
+                                <p>Strives to be a member of the Royal Guard</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--Undyne Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Undyne.jpg" alt="Undyne">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Undyne</h3>
+                                <p>Captain of the Royal Guard</p>
+                                <p>Will stop at nothing to steal your SOUL</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Flex Row 3-->
+                    <div class="flex-row">
+                        <!--Alphys Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Alphys.jpg" alt="Alphys">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Alphys</h3>
+                                <p>The Underground's Royal Scientist</p>
+                                <p>Helps you shortly after meeting her</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--Mettaton Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Mettaton.jpg" alt="Mettaton">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Mettaton</h3>
+                                <p>Dr. Alphys' Brilliant invention</p>
+                                <p>Wants nothing but to become a star</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--Asgore Character Card-->
+                        <div class="flip-chr">
+                            <div class="flip-chr-inner">
+                              <div class="flip-chr-front">
+                                <img src="/images/Asgore.jpg" alt="Asgore">
+                              </div>
+                              <div class="flip-chr-back">
+                                <h3>Asgore</h3>
+                                <p>King of The Underground</p>
+                                <p>You must not let him steal your SOUL</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Short AU description section-->
+            <section id="au">
+                <h2 class="textbox header">What are AUs?</h2>
+                <!--Reverse Grid class Puts image on the left and Text on the right-->
+                <div class="grid-rev-sect">
+                <p class="textbox desc">
+                    AUs or "Alternate Universes" are fanmade reinterpretations or variations of Undertale.
+                   <br>These AUs take the original setting and characters from Undertale, and modify them in fun and creative ways, from small tweaks, to entire overhauls!
+                   <br>This concept allows fans to explore different possibilities, settings and/or themes while retaining the core essence of the original game.
+                   <br><br>Interestingly enough, most of the AUs seem to revolve around the character <strong>Sans</strong>. This is most likely due to his high popularity within the Undertale fandom.
+                   <br><br>Fore more information, check out the "AUs" section of the Wiki!
+                </p>
+                <img src="/images/AUs1.jpg" alt="Image of different Sans AU variants.">
+            </div>
+            </section>
+
+        </main>
+
+        <!--
+        End banner found near bottom of webpage
+        Purely cosmetic, acts similar to top banner
+        -->
+        <div id="home-end-banner" class="banner">
+            <div class="textbox title">
+                <h1>We hope you<br>Enjoy your Stay!</h1>
+            </div>
+        </div>
+
+        <!--Footer for every page-->
+        <footer>
+            <!--Main container for footer-->
+            <div class="footer-container">
+                <!--
+                Info and Special Thanks area for Footer with links using styled uls. displayed on left side
+                links use target="_blank" to have the website appear in a different tab
+                -->
+                <div class="footerinfo">
+                    <!--Learn more area-->
+                    <div class="learnmore">
+                        <h3>For more information, check out these websites:</h3>
+                        <!--Areas where you can learn more about Undertale and it's various AUs-->
+                        <ul>
+                            <li><a href="https://en.wikipedia.org/wiki/Undertale" target="_blank">"Undertale" on Wikipedia</a></li>
+                            <li><a href="https://undertale-au.fandom.com/wiki/Undertale_AU_Wiki" target="_blank">The Undertale Wiki</a></li>
+                            <li><a href="https://undertale.fandom.com/wiki/Main_Page" target="_blank">The Undertale Fandom Wiki</a></li>
+                            <li><a href="https://undertale-au-fanon.fandom.com/wiki/Undertale_Fanon_AU_Wiki" target="_blank">The Undertale Fanon AU Wiki</a></li>
+                        </ul>
+                    </div>
+                    <!--Special Thanks area-->
+                    <div class="thanks">
+                        <h3>Special Thanks to these Websites for helping me with my Coding Journey:</h3>
+                        <!--Links where i learned my coding skills from and where i found solutions to problems during coding-->
+                        <ul>
+                            <li><a href="https://www.codecademy.com" target="_blank">Codeacademy</a></li>
+                            <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                            <li><a href="https://stackoverflow.com" target="_blank">Stackoverflow</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Mock Message contact form. displayed on right side-->
+                <form>
+                    <h3>Contact Us:</h3>
+                    <!--text input for first name with placeholder text-->
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+                    <!--text input for last name with placeholder text-->
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+                    <!--Select yout own county from various options using select tag-->
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="italy">Italy</option>
+                    <option value="netherlands">Netherlands</option>
+                    <option value="uk">UK</option>
+                    <option value="usa">USA</option>
+                    </select>
+
+                    <!--Expandable "Subject of Message" text area-->
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+
+                    <!--Submit button-->
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
