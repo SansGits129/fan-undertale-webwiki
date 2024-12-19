@@ -4,8 +4,8 @@ Font meant to replicate the font used in the game Undertale
 */
 @font-face {
     font-family: Determination;
-    src: url('/fonts/DeterminationMonoWeb.woff') format('woff'),
-         url('/fonts/DTM-Mono.otf') format('opentype');
+    src: url('fonts/DeterminationMonoWeb.woff') format('woff'),
+         url('fonts/DTM-Mono.otf') format('opentype');
 }
 
 /* Ensuring Compatibility across browsers */
@@ -17,7 +17,7 @@ Font meant to replicate the font used in the game Undertale
 
 /* Setting defaults for font+color alongside background image */
 body {
-  background-image: url('/images/StarsBackground.jpg');
+  background-image: url('images/StarsBackground.jpg');
   font-family: Determination, Arial, sans-serif; /* Fallback fonts incase Determination isn't found */
   color: white;
 }
@@ -417,38 +417,38 @@ done through use of IDs
 
 /* Home top banner */
 #home-banner {
-  background-image: url('/images/banner.jpg');
+  background-image: url('images/banner.jpg');
   background-position: top center;
 }
 
 /* Home bottom banner */
 #home-end-banner {
-  background-image: url('/images/RuinsCity.jpg');
+  background-image: url('images/RuinsCity.jpg');
   background-position: bottom center;
   margin-top: 50px;
 }
 
 /* AUs banner */
 #au-banner {
-  background-image: url('/images/AUbanner.jpg');
+  background-image: url('images/AUbanner.jpg');
   background-position: top center;
 }
 
 /* shop banner */
 #shop-banner {
-  background-image: url('/images/shopbanner.jpg');
+  background-image: url('images/shopbanner.jpg');
   background-position: top center;
 }
 
 /* stats banner */
 #stats-banner {
-  background-image: url('/images/statsbanner.webp');
+  background-image: url('images/statsbanner.webp');
   background-position: top center;
 }
 
 /* About Us banner */
 #about-banner {
-  background-image: url('/images/aboutbanner.jpg');
+  background-image: url('images/aboutbanner.jpg');
   background-position: top center;
 }
 
